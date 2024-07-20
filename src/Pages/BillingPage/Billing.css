@@ -1,0 +1,115 @@
+/* src/components/Billing.css */
+
+.billing-container {
+    width: 100%;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin: 40px 20px; */
+    /* padding: 20px; */
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.billing-form {
+    flex: 1;
+    max-width: 40%;
+    margin: 10px 0;
+    margin-right: 100px;
+    padding: 10px 20px 30px 0;
+   
+}
+
+.payment-details {
+    flex: 1;
+    max-width: 35%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #615f5f;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #ebdedeec;
+    border: none;
+    outline: none;
+    border-radius:0;
+    
+}
+
+.payment-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.border-bottom{
+    border-bottom: 0.7px solid #414040;
+}
+
+.pay-for-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.pay-for-item img{
+     max-width: 10%;
+}
+
+.payment-card-option{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.payment-card-option img{
+    max-width: 30px;
+    height: 20px;
+}
+
+.coupon-space{
+    margin-top: 20px;
+}
+
+.coupon{
+    padding: 10px;
+    outline: none;
+}
+
+.coupon-space button{
+    
+}
+
+.payment-button{
+    padding: 10px;
+    background-color:#e42828;
+    color: #fff;
+    border: none;
+}
+@media (max-width: 768px) {
+    .billing-form, .payment-details {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,33 @@
+.category{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 4em;
+}
+
+.category p{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(238, 18, 37);
+    margin-bottom: 0;
+}
+
+.category p:before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background:rgb(177, 18, 18) ;
+}
+
+.category-flex{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: row;
+    gap: 30px;
+}
+
+img{
+    width: 400px;
+}

@@ -1,0 +1,122 @@
+/* .flashSalesPage{
+    max-width: 100%;
+    padding: 20px;
+    background-color: #07530d;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.flashCard{
+    max-width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+} */
+
+.flashSalesPage {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.flashsales-headline{
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.flashsales-headline span{
+    margin-left: 30px;
+}
+
+.flashSalesPage .products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.flash-button{
+    margin:auto;
+    text-align: center;
+    padding: 10px 20px;
+    background: #e60023;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+/* FlashSaleCard.css */
+
+.flashCard {
+    /* border: 1px solid #ddd; */
+    /* padding: 10px; */
+    margin: 6px 7px 10px;
+    width: 190px;
+    text-align: left;
+    line-height: 5px;
+    background-color: #ffffff;
+    padding-bottom: 15px;
+}
+
+.flash_img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 9em;
+    background: #e7e5e5;
+}
+.flash_img img{
+    width: 90px
+}
+
+.icons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 20px;
+    left: 190px;
+    bottom: 30px;
+ }
+
+ .icons img{
+    width: 70%;
+ }
+
+ .add-to-cart-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    opacity: 1;
+}
+
+.flashCard h3{
+    font-size: 14px;
+}
+.flashCard .old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 20px;
+}
+
+.flashCard .new-price {
+    color: #e60023;
+    font-weight: bold;
+
+}

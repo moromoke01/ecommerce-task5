@@ -1,0 +1,163 @@
+/* About Hero Section */
+.about-hero {
+    width: 100%;
+    margin: auto;
+    padding: 80px 0 40px 0;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.about-hero-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.about-hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 70px 0 0;
+}
+
+.about-hero-content h1 {
+    font-size: 30px;
+}
+
+.about-hero-pic {
+    width: 50%;
+    height: auto;
+    background-color: #EB7EA8;
+}
+
+.about-hero-pic img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    margin-right: -50px;
+}
+
+/* About Section 2 */
+.about-section2 {
+    margin: auto;
+}
+
+.about-section2-flex {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-section2-flex img {
+    max-width: 220px;
+    height: auto;
+}
+
+/* About Section 3 */
+.about-section3 {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 140px;
+}
+
+.about-section3 img {
+    max-width: 260px;
+    height: auto;
+}
+
+/* Priority Section */
+.ourPriority {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.ourPriority img {
+    max-width: 200px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .about-hero-content, .about-hero-pic {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-hero-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .about-hero-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .about-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .about-section2-flex {
+        gap: 40px;
+    }
+
+    .about-section3{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-section3 img {
+        max-width: 300px;
+    }
+
+    .ourPriority {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 60px 0 30px 0;
+    }
+
+    .about-hero-content h1 {
+        font-size: 20px;
+    }
+
+    .about-section2-flex img, .about-section3 img {
+        max-width: 160px;
+    }
+
+    .ourPriority img {
+        max-width: 150px;
+    }
+}

@@ -1,0 +1,14 @@
+.ourPriority{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.ourPriority img{
+   max-width: 200px;
+}
