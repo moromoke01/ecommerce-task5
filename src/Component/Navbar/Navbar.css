@@ -184,6 +184,7 @@
 .nav-right-icons {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 .search-cart {
@@ -202,8 +203,13 @@
     margin-right: 10px;
 }
 
-.nav-icons .icon {
-    margin-left: 15px;
+.nav-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.nav-icons .icon-right {
+    margin-left: 25px;
 }
 
 .icon-link {
@@ -258,6 +264,7 @@
         top: 100px; /* Adjust based on your requirement */
         left: 0;
         border-top: 1px solid #ddd;
+        
     }
 
     .nav-right-icons.active {

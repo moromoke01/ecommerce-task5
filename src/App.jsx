@@ -9,7 +9,7 @@ import Login from './Pages/AuthPage/Login';
 import About from './Pages/About/About';
 import Cart from './Pages/CartPage/CartPage';
 import Billing from './Pages/BillingPage/Billing';
-// import Wishlist from './Pages/Wishlist/Wishlist';
+import Wishlist from './Pages/Wishlist/Wishlist';
 
 import { listenAuthState } from './Features/AuthSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -43,7 +43,7 @@ function App() {
           {/* <Route path="/signup" element={user ? <Navigate to="/" /> : <Signup />} /> */}
           {/* <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} /> */}
           <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
-          {/* <Route path="/wishlist" element={<PrivateRoute><Wishlist /></PrivateRoute>} /> */}
+          <Route path="/wishlist" element={<PrivateRoute><Wishlist /></PrivateRoute>} />
           <Route path="/billing" element={<PrivateRoute><Billing /></PrivateRoute>} />
         </Routes>
         <Footer />

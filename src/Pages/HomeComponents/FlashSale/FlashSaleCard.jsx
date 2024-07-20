@@ -1,128 +1,36 @@
-// import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { addToCart } from '../../CartPage/CartSlice';
-// import heart from '../../../assets/Fill Heart.png';
-// import eyes from '../../../assets/Fill Eye.png';
-// import './Flashsale.css';
-
-// const FlashSaleCard = ({ id, src, productName, oldPrice, newPrice, rating }) => {
-//   const product = { id, src, productName, oldPrice, newPrice, rating };
-//   const dispatch = useDispatch();
-//   const user = useSelector((state) => state.auth.user);
-
-//   const handleAddToCart = () => {
-//     if (user) {
-//       const item = { id, src, productName, oldPrice, newPrice, rating, quantity: 1 };
-//       dispatch(addToCart({ userId: user.uid, item }));
-//     } else {
-//       alert('Please log in to add items to your cart.');
-//     }
-//   };
-
-//   return (
-//     <div className="flashCard">
-//       <div className="flash_img">
-//         <img src={src} alt="flashcard-img" />
-//         <div className="icons">
-//           <img src={heart} alt="heart-icon" />
-//           <img src={eyes} alt="eyes-icon" />
-//         </div>
-//         <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
-//       </div>
-//       <h3>{productName}</h3>
-//       <p>
-//         <span className="new-price">{newPrice}</span>
-//         <span className="old-price">{oldPrice}</span>
-//       </p>
-//       <p>Rating: {rating}⭐</p>
-//     </div>
-//   );
-// };
-
-// export default FlashSaleCard;
-
-
-
-
-
-// import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { useNavigate } from 'react-router-dom';
-// import { addToCart } from '../../CartPage/CartSlice';
-// import heart from '../../../assets/Fill Heart.png';
-// import eyes from '../../../assets/Fill Eye.png';
-// import './Flashsale.css';
-
-// const FlashSaleCard = ({ id, src, productName, oldPrice, newPrice, rating }) => {
-//   const product = { id, src, productName, oldPrice, newPrice, rating };
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const user = useSelector((state) => state.auth.user);
-
-//   const handleAddToCart = () => {
-//     if (user) {
-//       const item = { id, src, productName, oldPrice, newPrice, rating, quantity: 1 };
-//       dispatch(addToCart({ userId: user.uid, item }));
-//     } else {
-//       alert('Please log in to add items to your cart.');
-//     }
-//   };
-
-//   const handleNavigateToDetail = () => {
-//     navigate(`/product/${id}`, { state: { product } });
-//   };
-
-//   return (
-//     <div className="flashCard" onClick={handleNavigateToDetail}>
-//       <div className="flash_img">
-//         <img src={src} alt="flashcard-img" />
-//         <div className="icons">
-//           <img src={heart} alt="heart-icon" />
-//           <img src={eyes} alt="eyes-icon" />
-//         </div>
-//         <button className="add-to-cart-btn" onClick={(e) => { e.stopPropagation(); handleAddToCart(); }}>
-//           Add to Cart
-//         </button>
-//       </div>
-//       <h3>{productName}</h3>
-//       <p>
-//         <span className="new-price">{newPrice}</span>
-//         <span className="old-price">{oldPrice}</span>
-//       </p>
-//       <p>Rating: {rating}⭐</p>
-//     </div>
-//   );
-// };
-
-// export default FlashSaleCard;
-
-
-
-
-
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { addToWishlist } from '../../Wishlist/WishlistSlice';
 import { addToCart } from '../../CartPage/CartSlice';
-import heart from '../../../assets/Fill Heart.png';
-import eyes from '../../../assets/Fill Eye.png';
+import { CiHeart } from "react-icons/ci";
+import { LuEye } from "react-icons/lu";
 import './Flashsale.css';
+import { useNavigate } from 'react-router-dom';
 
-const FlashSaleCard = ({ id, src, productName, oldPrice, newPrice, rating }) => {
-  const product = { id, src, productName, oldPrice, newPrice, rating };
+const FlashSaleCard = ({ id, src, productName, oldPrice, newPrice, rating, discount }) => {
+  const product = { id, src, productName, oldPrice, newPrice, rating, discount };
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user);
+
+  const handleAddToWishlist = (e) => {
+    e.stopPropagation();
+    if (user) {
+      dispatch(addToWishlist({ userId: user.uid, item: { id, src, productName, newPrice, rating } }));
+    } else {
+      alert('Please log in to add items to your wishlist.');
+    }
+  };
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
     if (user) {
-      const item = { id, src, productName, oldPrice, newPrice, rating, quantity: 1 };
+      const item = { id, src, productName, oldPrice, newPrice, rating, quantity: 1 ,discount};
       dispatch(addToCart({ userId: user.uid, item }));
     } else {
       alert('Please log in to add items to your cart.');
     }
   };
-
- 
 
   const handleNavigateToDetail = () => {
     navigate(`/product/${id}`, { state: { product } });
@@ -132,19 +40,12 @@ const FlashSaleCard = ({ id, src, productName, oldPrice, newPrice, rating }) => 
     <div className="flashCard" >
       <div className="flash_img">
         <img src={src} alt="flashcard-img" onClick={handleNavigateToDetail}/>
-        <div className="icons">
-          <img
-            src={heart}
-            alt="heart-icon"  
-          />
-          <img src={eyes} alt="eyes-icon" />
+        <span className="discount">{discount}</span>
+        <div >
+          <CiHeart className="icon-1" onClick={handleAddToWishlist} />
+          <LuEye className="icon-2" />
         </div>
-        <button
-          className="add-to-cart-btn" >
-          Add to Cart
-        </button>
-
-        
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
       </div>
       <h3>{productName}</h3>
       <p>
@@ -152,8 +53,6 @@ const FlashSaleCard = ({ id, src, productName, oldPrice, newPrice, rating }) => 
         <span className="old-price">{oldPrice}</span>
       </p>
       <p>Rating: {rating}⭐</p>
-     
-      
     </div>
   );
 };

@@ -14,6 +14,7 @@ const bestProductsData = [
     productName: 'The north coat',
     newPrice: '$260',
     oldPrice: '$360'
+    
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const bestProductsData = [
     productName: 'Gucci duffle bag',
     newPrice: '$960',
     oldPrice: '$1160'
+    
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const bestProductsData = [
     productName: 'RGB liquid CPU cooler',
     newPrice: '$160',
     oldPrice: '$170'
+    
   },
   {
     id: 4,
@@ -59,6 +62,7 @@ const BestSelling = () => {
             productName={product.productName}
             newPrice={product.newPrice}
             oldPrice={product.oldPrice}
+            discount={product.Discount}
           />
         ))}
       </div>

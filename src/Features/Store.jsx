@@ -12,13 +12,13 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './AuthSlice';
-// import wishlistReducer from '../Pages/Wishlist/Features/WishlistSlice';
+import wishlistReducer from '../Pages/Wishlist//WishlistSlice';
 import cartReducer from '../Pages/CartPage/CartSlice';
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    // wishlist: wishlistReducer,
+    wishlist: wishlistReducer,
     cart: cartReducer
   },
 });

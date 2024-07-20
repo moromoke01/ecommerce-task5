@@ -45,7 +45,7 @@
     flex-direction: row;
     gap: 20px;
   }
-  .form-group {
+  .contact-form-group {
     margin-bottom: 15px;
     margin-left: 20px;
   }
@@ -62,6 +62,7 @@
     font-size: 16px;
     background-color: #bbb4afb4;
     border-radius: 4px;
+    border: none;
   }
   
   .textarea-field {

@@ -34,13 +34,13 @@ const Navbar = () => {
                     <RiSearchLine />
                 </div>
                 <div className="nav-icons">
-                    <span className="icon heart">
+                    <span className=".icon-right heart">
                         <Link to="/wishlist"><IoHeartOutline className='icon-link' /></Link>
                     </span>
-                    <span className="icon cart">
+                    <span className=".icon-right cart">
                         <Link to="/cart"><IoCartOutline className='icon-link' /></Link>
                     </span>
-                    <span className="icon">
+                    <span className=".icon-right">
                         <Link to="/login"><FiUser className='icon-link' /></Link>
                     </span>
                 </div>

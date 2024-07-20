@@ -18,20 +18,20 @@ const ContactPage = () => {
 
  <div className="right-section">
     <div className='form-flex'>
-        <div className="form-group">
+        <div className="contact-form-group">
           <label className="input-label">Name</label>
           <input type="text" className="input-field" />
         </div>
-        <div className="form-group">
+        <div className="contact-form-group">
           <label className="input-label">Email</label>
           <input type="email" className="input-field" />
         </div>
-        <div className="form-group">
+        <div className="contact-form-group">
           <label className="input-label">Phone Number</label>
           <input type="tel" className="input-field" />
         </div>
     </div>
-        <div className="form-group">
+        <div className="contact-form-group">
           <label className="input-label">Message</label>
           <textarea className="textarea-field" placeholder="Write your message..." />
         </div>

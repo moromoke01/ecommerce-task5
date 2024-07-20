@@ -25,23 +25,7 @@
     gap: 20px;
 }
 
-.large-box {
-    grid-column: span 2; /* Spans two columns */
-}
 
-.small-box {
-    /* Styles for the small boxes */
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px;
-    font-size: 14px;
-}
 
 img {
     max-width: 100%;
