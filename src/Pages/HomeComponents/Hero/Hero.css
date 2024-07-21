@@ -80,8 +80,13 @@
 
   .hero-section {
     flex-direction: column;
+    overflow-x: hidden;
   }
 
+  .hero-text h1 {
+    font-size: 30px;
+    text-align: center;
+  }
   .hero-advert {
     flex-direction: column;
     width: 100%;
