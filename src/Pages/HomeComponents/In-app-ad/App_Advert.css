@@ -52,7 +52,7 @@
     background-image: url('../../../assets/advert2.png');
     width: 70%;
     height: 50vh;
-    background-position: center; /* Center the background image */
+    background-position: center; 
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
@@ -71,48 +71,50 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    
     .advert2 {
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        height: auto; /* Adjust height for better content fitting */
+        max-width: 100%;
+        flex-direction: column; 
+        height: auto; 
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .ad-content {
         padding-left: 0;
         width: 100%;
-        margin-bottom: 20px; /* Space between text and image */
+        margin-bottom: 20px;
     }
 
     .ad-content h1 {
-        font-size: 28px; /* Reduce font size on mobile */
+        font-size: 28px;
     }
 
     .ad-content span {
-        margin-top: 20px; /* Adjust margin for smaller screens */
+        margin-top: 20px; 
     }
 
     .ad-content button {
-        padding: 12px 30px; /* Adjust padding for button */
+        padding: 12px 30px; 
     }
 
     .ad-img {
         width: 100%;
-        height: 40vh; /* Adjust height for mobile view */
-        background-position: center; /* Center the background image */
-        background-size: cover; /* Ensure background image covers area */
+        height: 40vh; 
+        /* background-position: center;  */
+        background-size: contain; 
     }
 
-    .ad-img img {
-        display: none; /* Hide the img tag since background image is used */
-    }
+    
 }
 
 @media (max-width: 480px) {
     .ad-content h1 {
-        font-size: 24px; /* Further reduce font size for very small screens */
+        font-size: 24px; 
     }
 
     .ad-content button {
-        padding: 10px 20px; /* Adjust button padding for very small screens */
+        padding: 10px 20px; 
     }
 }

@@ -13,8 +13,8 @@ body {
 
 @media (max-width:786px){
   #root{
-    width: 100%;
-    /* margin: 10px; */
+    max-width: 100%;
+    margin: 0;
     padding: 0;
     margin: auto;
   }

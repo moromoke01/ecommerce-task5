@@ -25,6 +25,8 @@
 .nav-items {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
@@ -44,10 +46,15 @@
 }
 
 .nav-right-icons {
+    width: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
-    margin-right: 50px;
+    /* margin-left: -200px; */
+    margin-right: 220px;
+    
+    /* z-index: -1; */
 }
 
 .search-cart {
@@ -69,13 +76,16 @@
 .nav-icons {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    width: 0;
+    /* align-items: center;
+    justify-content: center; */
     margin-bottom: 20px;
     gap: 5px;
-    margin-right: 130px;
-    /* margin-left: -120px; */
+    margin-right: 180px;
+    margin-left: -190px;
+    z-index: 10;
 }
+
 
 .nav-icons .icon {
     position: relative;
@@ -142,6 +152,7 @@
         top: 60px;
         left: 0;
         border-top: 1px solid #ddd;
+        padding-bottom: 3em;
     }
 
     .nav-items.active {
@@ -166,7 +177,21 @@
     }
 
     .nav-right-icons.active {
+        width: 0;
         display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    .nav-icons {
+        width: 0;
+      margin-top: 6em;
+      margin-left: 6em;
+      
+    }
+    
+    
+    .nav-icons .icon {
+        position: relative;
     }
 
     .search-cart {
