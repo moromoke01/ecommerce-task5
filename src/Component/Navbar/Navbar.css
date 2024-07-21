@@ -124,6 +124,8 @@
     text-align: left;
     margin: auto;
     color:#fff;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .user-menu a:hover, .user-menu button:hover {
