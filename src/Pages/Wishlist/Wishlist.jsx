@@ -6,6 +6,7 @@ import './Wishlist.css';
 import { addToCart } from '../CartPage/CartSlice';
 import { MdDeleteOutline } from "react-icons/md";
 import RelatedItems from './ReltedItems/RelatedItems';
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const WishlistPage = () => {
   const dispatch = useDispatch();
@@ -46,7 +47,9 @@ const WishlistPage = () => {
             <div >
               <MdDeleteOutline className="icon" onClick={() => handleRemoveFromWishlist(item.id)}/>
            </div>
-        <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>
+        <MdOutlineShoppingCart />
+          Add to Cart</button>
       </div>
       
       <p>{item.productName}</p>

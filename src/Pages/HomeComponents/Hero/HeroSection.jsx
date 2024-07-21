@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Hero.css'
 import { BsApple } from "react-icons/bs";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const HeroSection = () => {
@@ -46,7 +47,7 @@ const HeroSection = () => {
          <div className='hero-text'>
             <p> <BsApple /> Iphone 14 series</p>
             <h1>Up to 10% off Voucher</h1>
-            <p>Shop Now</p>
+            <p>Shop Now <FaArrowRightLong className="icon-white"/></p>
          </div>
 
          <div className='hero-img'>

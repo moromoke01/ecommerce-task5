@@ -10,12 +10,14 @@ import About from './Pages/About/About';
 import Cart from './Pages/CartPage/CartPage';
 import Billing from './Pages/BillingPage/Billing';
 import Wishlist from './Pages/Wishlist/Wishlist';
-
+import AccountPage from './Pages/Account/AccountPage';
+import Error from './Pages/ErrorPage/Error';
 import { listenAuthState } from './Features/AuthSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import ContactPage from './Pages/Contact/ContactPage';
 import ProductDetail from './Pages/ProductDetail/ProductDetail';
+
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/myaccount" element={<AccountPage />} />
           <Route path="/product/:id" element={<ProductDetail />} />
            {/* <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} /> */}
@@ -45,6 +48,7 @@ function App() {
           <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
           <Route path="/wishlist" element={<PrivateRoute><Wishlist /></PrivateRoute>} />
           <Route path="/billing" element={<PrivateRoute><Billing /></PrivateRoute>} />
+          <Route path="*" element={<Error />} /> 
         </Routes>
         <Footer />
       </Router>

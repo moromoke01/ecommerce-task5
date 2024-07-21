@@ -54,6 +54,12 @@
   font-size: 55px;
 }
 
+.icon-white{
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-left: 10px;
+}
 .hero-img {
   background-image: url('../../../assets/hero_endframe.png');
   width: 60%;

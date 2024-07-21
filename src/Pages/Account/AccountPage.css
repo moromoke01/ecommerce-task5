@@ -1,0 +1,135 @@
+
+.Account {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  
+  .account-page {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .account-page p:first-child {
+    text-align: left;
+  }
+  
+  .sidebar {
+    width: 30%;
+    padding: 20px;
+  }
+  
+  .list {
+    margin-bottom: 30px;
+  }
+  
+  .list h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .list p {
+    margin: 5px 0;
+    margin-left: 25px;
+    font-size: 15px;
+    color: #464545;
+  }
+  
+  .content {
+    width: 70%;
+    padding: 0 20px;
+    background-color: #ffffff;
+  }
+  
+  .red-text {
+    color: red;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .input-row input {
+    width: 100%;
+    background: #e9e2e2c0;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .input-row label, label {
+    font-size: 13px;
+  }
+  
+  .full-width {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    background: #e9e2e2c0;
+  }
+  
+  .account-btn {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .account-btn button {
+    padding: 2px 15px;
+    border: none;
+    background: red;
+    color: #ffffff;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .sidebar, .content {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .input-row {
+      flex-direction: column;
+    }
+  
+    .input-row input {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .account-btn {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .list h2 {
+      font-size: 14px;
+    }
+  
+    .list p {
+      font-size: 13px;
+      margin-left: 15px;
+    }
+  
+    .input-row input {
+      padding: 8px;
+    }
+  
+    .full-width {
+      padding: 8px;
+    }
+  
+    .account-btn button {
+      padding: 5px 10px;
+    }
+  }
+  

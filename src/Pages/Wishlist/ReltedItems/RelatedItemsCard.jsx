@@ -5,6 +5,7 @@ import { addToCart } from '../../CartPage/CartSlice';
 import heart from '../../../assets/Fill Heart.png';
 import eyes from '../../../assets/Fill Eye.png';
 import './RelatedItems.css';
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const RelatedItemsCard = ({  src, productName, oldPrice, newPrice, rating, discount }) => {
 //   const product = { id, src, productName, oldPrice, newPrice, rating };
@@ -37,6 +38,7 @@ const RelatedItemsCard = ({  src, productName, oldPrice, newPrice, rating, disco
         </div>
 
         <button className="add-to-cart-btn" onClick={handleAddToCart}>
+        <MdOutlineShoppingCart />
           Add to Cart
         </button>
 
